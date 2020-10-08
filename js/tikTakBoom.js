@@ -172,16 +172,7 @@ tikTakBoom = {
             setTimeout(startTimer, 1000, timeTraining);
         }
         else {timerField.innerText = `START`};
-        //this.timerField.innerText = `3`;
-        //this.gameStatusField.innerText = `Ход ${this.players[this.currentPlayer].name} через`;
-        //let a = this;
-        //const startTimer = 
-        //setInterval(function () {
-            
-        //    this.timerField.innerText = `${timeTraining}`;
-        //    if(timeTraining === 0) {};
-
-       // }, 1000);
+      
 
     },
 }
