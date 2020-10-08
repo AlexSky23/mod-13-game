@@ -163,6 +163,7 @@ tikTakBoom = {
             }
         }
     },
+    
     startTimer(timeTraining) {
         //var timeTraining = 3;
         console.log(timeTraining);
@@ -183,5 +184,5 @@ tikTakBoom = {
 
        // }, 1000);
 
-    }
+    },
 }
