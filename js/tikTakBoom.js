@@ -2,7 +2,7 @@ tikTakBoom = {
     init(
         tasks,
         gamePlayers,
-
+        
         timerField,
         timeSetting,
         gameStatusField,
@@ -37,7 +37,8 @@ tikTakBoom = {
     },
 
     run() {
-        this.startTimer(3);
+        this.startTimer(5);
+        setTimeout(5000);
         this.state = 1;
 
         this.rightAnswers = 0;
@@ -85,6 +86,7 @@ tikTakBoom = {
     },
 
     startGame(number = 0) {
+        
         if (this.players === undefined) {
             this.players = creatDataPlayers(this.gamePlayers, this.boomTimer);
         }
@@ -102,7 +104,7 @@ tikTakBoom = {
         }
 
         this.currentPlayer = number;
-        this.startTimer();
+        this.startTimer(3);
     },
 
     printQuestion(task) {
@@ -163,16 +165,22 @@ tikTakBoom = {
             }
         }
     },    
+    
     startTimer(timeTraining) {
-        //var timeTraining = 3;
-        console.log(timeTraining);
-        if(timeTraining > 0) {
+        //let timeTraining = 3;
+        if (timeTraining > 0) {
             timerField.innerText = timeTraining;
             timeTraining-=1;
-            setTimeout(startTimer, 1000, timeTraining);
+            setTimeout( () => {this.startTimer(timeTraining)}, 1000, ),
+            console.log(timeTraining)
         }
-        else {timerField.innerText = `START`};
+        else {
+            timerField.innerText = `START`;
+            //clearTimeout(this.startTimer);
+        };
       
 
-    },
+    }
+
+    
 }
