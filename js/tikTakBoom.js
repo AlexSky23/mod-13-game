@@ -162,8 +162,7 @@ tikTakBoom = {
                 this.finish('lose');
             }
         }
-    },
-    
+    },    
     startTimer(timeTraining) {
         //var timeTraining = 3;
         console.log(timeTraining);
